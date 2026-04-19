@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hexfall Tactics Prototype</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Browser Prototype</p>
+          <h1>Hexfall Tactics</h1>
+          <p class="hero-copy">
+            Lead a warrior, rogue, and mage across a hex battlefield against
+            goblins, an orc bruiser, and a skeleton archer.
+          </p>
+        </div>
+        <button id="restart-button" class="primary-button" type="button">
+          Restart Battle
+        </button>
+      </header>
+
+      <main class="game-layout">
+        <section class="board-panel">
+          <div class="board-header">
+            <div>
+              <p class="panel-label">Battlefield</p>
+              <h2 id="battle-status">Loading battle...</h2>
+            </div>
+            <p id="turn-indicator" class="turn-indicator"></p>
+          </div>
+
+          <canvas
+            id="battlefield"
+            width="960"
+            height="720"
+            aria-label="Hex battlefield"
+          ></canvas>
+
+          <div class="legend">
+            <span><i class="swatch swatch-player"></i>Heroes</span>
+            <span><i class="swatch swatch-enemy"></i>Enemies</span>
+            <span><i class="swatch swatch-rock"></i>Blocked terrain</span>
+            <span><i class="swatch swatch-move"></i>Move</span>
+            <span><i class="swatch swatch-attack"></i>Attack</span>
+            <span><i class="swatch swatch-special"></i>Special</span>
+          </div>
+        </section>
+
+        <aside class="sidebar">
+          <section class="panel">
+            <p class="panel-label">Turn Order</p>
+            <div id="turn-order" class="turn-order"></div>
+          </section>
+
+          <section class="panel">
+            <p class="panel-label">Selected Unit</p>
+            <div id="selected-unit" class="selected-unit"></div>
+          </section>
+
+          <section class="panel">
+            <p class="panel-label">Actions</p>
+            <div class="actions">
+              <button id="move-button" class="action-button" type="button">
+                Move
+              </button>
+              <button id="attack-button" class="action-button" type="button">
+                Attack
+              </button>
+              <button id="special-button" class="action-button" type="button">
+                Special
+              </button>
+              <button id="end-turn-button" class="action-button" type="button">
+                End Turn
+              </button>
+            </div>
+            <p id="action-hint" class="action-hint"></p>
+          </section>
+
+          <section class="panel">
+            <p class="panel-label">Combat Log</p>
+            <div id="combat-log" class="combat-log"></div>
+          </section>
+        </aside>
+      </main>
+    </div>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
