@@ -1,0 +1,22 @@
+{
+  "name": "rpg-hex-turn",
+  "version": "1.0.0",
+  "description": "Hexfall Tactics is a lightweight browser prototype for a turn-based fantasy RPG played on a 2D hex battlefield. It uses plain HTML, CSS, and JavaScript modules, so there is no build step.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [
+    "game",
+    "hex",
+    "tactics",
+    "rpg"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vite": "^8.0.8"
+  }
+}
